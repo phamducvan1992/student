@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student List</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<h1>Danh sách sinh viên</h1>
+<!--<ul>-->
+<!--    <li th:each="student : ${students}" th:text="${student}"></li>-->
+<!--</ul>-->
+<table>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.id}"></td>
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.kelas}"></td>
+        <td th:text="${student.jurusan}"></td>
+    </tr>
+</table>
+
+<form method="get" th:action="@{/api/v1/export/student}">
+    <input type="submit" value="Export">
+</form>
+</body>
+</html>
