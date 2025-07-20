@@ -1,14 +1,14 @@
-Setup SQL Server + Java spring boot connetion
+#Setup SQL Server + Java spring boot connetion
 
-1 Tải SQL Server 2019 Express -> SQL2019-SSEI-Expr -> Install
-2 Tải SSMS -> vs_SSMS -> Install
-3 Kết nối SSMS -> Server
+#1 Tải SQL Server 2019 Express -> SQL2019-SSEI-Expr -> Install
+#2 Tải SSMS -> vs_SSMS -> Install
+#3 Kết nối SSMS -> Server
 	+ Check hostname (Mở cmd -> hostname)
 	+ Mở SSMS -> Connect
 		+ Server Name: hostname\SQLEXPRESS
 		+ Authen: Windows
 		+ Connect
-4 Kiểm tra TCP & port 1433
+#4 Kiểm tra TCP & port 1433
 	+ Mở SQL Server Configuration Manager
 	+ Mở Network > Protocol > TCP/IP > Enable
 	+ Kiểm tra port: IPAll > TCP Dynamic Ports > 1433
@@ -27,11 +27,11 @@ Setup SQL Server + Java spring boot connetion
 			+ User mapping > chọn DB > Chọn role: db_owner
 			+ OK
 		+ Login lại bằng tài khoản mới tạo
-5 Properties cho Spring boot
+#5 Properties cho Spring boot
 	spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=student;encrypt=false;
 	spring.datasource.username=student
 	spring.datasource.password=12345678
 	spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
 	spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SQLServer2012Dialect
 
-6 Start Spring Boot
+#6 Start Spring Boot
